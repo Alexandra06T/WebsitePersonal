@@ -1,33 +1,23 @@
 body {
     display: flex;
     margin: 0;
-    min-height: 100vh;
     flex-direction: column;
-}
-header {
-    display: flex;
-    align-items: center;
-    padding: 2vh;
-    justify-content: space-between;
     background-color: black;
-    color: white;
 }
 main {
     display: flex;
-    background-color: lightskyblue;
-    flex-grow: 1;
 }
 .sidebar {
     flex: 0 0 10vw;
     display: block;
     background-color: black;
+    position: sticky;
 }
 .sidebar_btn {
     width: 100%;
-    height: 10%;
+    height: 3rem;
     background-color: black;
     font-size: large;
-    box-shadow: white;
 }
 .sidebar_btn > a {
     color: white;
@@ -36,23 +26,90 @@ main {
     letter-spacing: 0.1rem;
 }
 .content {
-    display: flex;
-    min-height: 100vh;
+    display: grid;
     margin: 0;
-    flex-direction: column;
+    padding: 0;
+    grid-template-rows: 1fr 5fr;
+    background-color: black;
 }
 .heading {
-    height: 3vw;
     width: 90vw;
-    background-color: aliceblue;
+    background-color: black;
+    margin: 0;
 }
-.effective_cnt {
-    background-color: darksalmon;
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.gallery > div {
+    position: relative;
+    cursor: pointer;
+}
+.gallery > div img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 57, 57, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    color: black;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-.effective_cnt> div {
-    width: 30vw;
-    height: 22vw;
+.gallery > div:hover .overlay {
+    transform: scale(1);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    overflow: scroll;
+    justify-content: center;
+    margin: 0;
+}
+.column img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    background-color: hotpink;
+    border: springgreen 2px solid;
+}
+@media screen and (max-width: 800px){
+    .sidebar {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .sidebar_btn {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px){
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+}
+.inner_content h1 {
+    color: white;
+    padding-bottom: 2rem;
+    padding-left: 10rem;
 }
