@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+main {
+    display: flex;
+    background-color: lightskyblue;
+    flex-grow: 1;
+}
+.sidebar {
+    flex: 0 0 10vw;
+    display: block;
+    background-color: black;
+}
+.sidebar_btn {
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    font-size: large;
+    box-shadow: white;
+}
+.sidebar_btn > a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Spartan', sans-serif;
+    letter-spacing: 0.1rem;
+}
+.content {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+.heading {
+    height: 3vw;
+    width: 90vw;
+    background-color: aliceblue;
+}
+.effective_cnt {
+    background-color: darksalmon;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.effective_cnt> div {
+    width: 30vw;
+    height: 22vw;
+}
