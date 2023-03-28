@@ -35,7 +35,8 @@ main {
     background-color: black;
 }
 .heading {
-    background-color: wheat;
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 0;
     display: flex;
@@ -60,14 +61,18 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(57, 57, 57, 0.502);
+    background: rgba(57, 57, 57, 0.7);
     top: 0;
     left: 0;
     transform: scale(0);
-    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.gallery a {
+    font-size: xx-large;
+    color: white;
+    text-decoration: none;
 }
 .gallery > div:hover .overlay {
     transform: scale(1);
@@ -75,19 +80,17 @@ main {
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
     justify-content: center;
     margin: 0;
 }
 .column img{
-    margin-top: 8px;
+    margin-top: 15px;
     width: 100%;
 }
 .column {
     flex: 25%;
     max-width: 25%;
-    padding: 0 4px;
-    background-color: hotpink;
+    padding-right: 15px;
 }
 @media screen and (max-width: 800px){
     .sidebar {
