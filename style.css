@@ -3,6 +3,7 @@ body {
     margin: 0;
     flex-direction: column;
     background-color: black;
+    font-family: sans-serif, 'Spartan';
 }
 main {
     display: grid;
