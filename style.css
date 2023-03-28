@@ -118,6 +118,16 @@ main {
     padding-bottom: 1rem;
     padding-left: 10rem;
 }
+.inner_content p, h2 {
+    color: white;
+    padding-left: 5rem;
+    padding-bottom: 1rem;
+}
+.inner_content li {
+    color: white;
+    padding-bottom: 1rem;
+    margin-left: 5rem;
+}
 .dropbutton {
     background-color: transparent;
     padding: 2px;
