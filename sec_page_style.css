@@ -99,8 +99,8 @@ main {
     .sidebar {
         display: none;
     }
-    #menu_btn_heading {
-        visibility: visible;
+    .dropbutton {
+        display: flex;
     }
     .gallery {
         grid-template-columns: 1fr 1fr;
@@ -109,9 +109,7 @@ main {
         max-width: 50vw;
     }
 }
-#menu_btn_heading {
-    visibility: collapse;
-}
+
 /*dropdown menu when responive needed*/
 .dropbutton {
     background-color: transparent;
@@ -120,6 +118,7 @@ main {
     cursor: pointer;
     position: sticky;
     margin-right: 1rem;
+    display: none;
 }
 .dropdown {
     position: relative;
