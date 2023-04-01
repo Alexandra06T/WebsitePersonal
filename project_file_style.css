@@ -12,7 +12,7 @@ main {
 .inner_content h1 {
     color: white;
     padding-bottom: 1rem;
-    padding-left: 7vw;
+    padding-left: 5rem;
 }
 .inner_content p, h2 {
     color: white;
@@ -23,6 +23,10 @@ main {
     color: white;
     padding-bottom: 1rem;
     margin-left: 5rem;
+}
+.inner_content p {
+    margin-right: 5vw;
+    text-align: justify;
 }
 /*sidebar menu*/
 .sidebar {
