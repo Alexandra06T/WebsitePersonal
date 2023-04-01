@@ -80,8 +80,20 @@ main {
 .gallery > div:hover .overlay {
     transform: scale(1);
 }
-
-@media screen and (max-width: 600px){
+.menu > ul {
+    list-style-type: none;
+}
+.menu > ul > li {
+    display: none;
+    padding: 2em;
+    margin-right: 1em;
+}
+.menu > ul > li > a {
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+}
+@media screen and (max-width: 800px) and (min-width: 200px){
     .sidebar {
         display: none;
     }
@@ -91,61 +103,74 @@ main {
     .gallery img {
         min-width: 96vw;
     }
-    #menu_btn_heading {
-        visibility: visible;
+    .menu > ul > li {
+        display: inline-block;
+        padding: 2vw;
+        margin: 1vw;
+    }
+    .menu > ul > li > a {
+        font-size: large;
+    }
+    .heading {
+        justify-content: space-evenly;
     }
 }
-@media screen and (max-width: 1200px) and (min-width: 600px){
+@media screen and (max-width: 1200px) and (min-width: 800px){
     .sidebar {
         display: none;
     }
-    .dropbutton {
-        display: flex;
-    }
+
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
     .gallery div img {
         max-width: 50vw;
     }
+    .menu > ul > li {
+        display: inline;
+    }
+    .heading {
+        justify-content: space-evenly;
+    }
+
 }
 
 /*dropdown menu when responive needed*/
-.dropbutton {
-    background-color: transparent;
-    padding: 2px;
-    border: none;
-    cursor: pointer;
-    position: sticky;
-    margin-right: 1rem;
-    display: none;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
+/*.dropbutton {*/
+/*    background-color: transparent;*/
+/*    padding: 2px;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    position: sticky;*/
+/*    margin-right: 1rem;*/
+/*    display: none;*/
+/*}*/
+/*.dropdown {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
 
-}
-.menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 grey;
-    z-index: 1;
-    font-size: small;
-    text-align: right;
-    font-weight: bold;}
-.menu a {
-    color: midnightblue;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown:hover .menu {
-    display: block;
-    right: 0;
-}
-.menu a:hover {
-    background-color: midnightblue;
-    color: white;
-}
+/*}*/
+/*.menu {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: white;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0 8px 16px 0 grey;*/
+/*    z-index: 1;*/
+/*    font-size: small;*/
+/*    text-align: right;*/
+/*    font-weight: bold;}*/
+/*.menu a {*/
+/*    color: midnightblue;*/
+/*    padding: 12px 16px;*/
+/*    text-decoration: none;*/
+/*    display: block;*/
+/*}*/
+/*.dropdown:hover .menu {*/
+/*    display: block;*/
+/*    right: 0;*/
+/*}*/
+/*.menu a:hover {*/
+/*    background-color: midnightblue;*/
+/*    color: white;*/
+/*}*/
