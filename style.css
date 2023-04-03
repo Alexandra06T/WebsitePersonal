@@ -134,7 +134,7 @@ header {
 @media screen and (max-width: 1400px) and (min-width: 300px){
 
     #homepage_main img {
-        object-fit: scale-down;
+        object-fit: scale-down; /*de modificat scale down, vh*/
     }
     .overlay {
         transform: rotate(90deg);
@@ -146,6 +146,9 @@ header {
         display: none;
     }
     #info_option {
+        display: none;
+    }
+    #photo_option {
         display: none;
     }
 }

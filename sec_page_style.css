@@ -1,7 +1,4 @@
 body {
-    display: flex;
-    margin: 0;
-    flex-direction: column;
     background-color: black;
     font-family: sans-serif, 'Spartan';
 }
@@ -9,7 +6,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 10fr;
 }
-
+footer {
+    color: white;
+    font-size: x-small;
+    text-align: right;
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
 /*sidebar menu*/
 .sidebar {
     padding: 0;
@@ -36,8 +39,9 @@ main {
     padding: 0;
     grid-template-rows: 50px auto 50px;
     background-color: black;
+    height: 100%;
 }
-.heading {
+.header {
     background-color: black;
     color: white;
     margin: 0;
@@ -76,6 +80,7 @@ main {
     font-size: xx-large;
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 .gallery > div:hover .overlay {
     transform: scale(1);
@@ -111,7 +116,7 @@ main {
     .menu > ul > li > a {
         font-size: large;
     }
-    .heading {
+    .header {
         justify-content: space-evenly;
     }
 }
@@ -129,48 +134,8 @@ main {
     .menu > ul > li {
         display: inline;
     }
-    .heading {
+    .header {
         justify-content: space-evenly;
     }
 
 }
-
-/*dropdown menu when responive needed*/
-/*.dropbutton {*/
-/*    background-color: transparent;*/
-/*    padding: 2px;*/
-/*    border: none;*/
-/*    cursor: pointer;*/
-/*    position: sticky;*/
-/*    margin-right: 1rem;*/
-/*    display: none;*/
-/*}*/
-/*.dropdown {*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-
-/*}*/
-/*.menu {*/
-/*    display: none;*/
-/*    position: absolute;*/
-/*    background-color: white;*/
-/*    min-width: 160px;*/
-/*    box-shadow: 0 8px 16px 0 grey;*/
-/*    z-index: 1;*/
-/*    font-size: small;*/
-/*    text-align: right;*/
-/*    font-weight: bold;}*/
-/*.menu a {*/
-/*    color: midnightblue;*/
-/*    padding: 12px 16px;*/
-/*    text-decoration: none;*/
-/*    display: block;*/
-/*}*/
-/*.dropdown:hover .menu {*/
-/*    display: block;*/
-/*    right: 0;*/
-/*}*/
-/*.menu a:hover {*/
-/*    background-color: midnightblue;*/
-/*    color: white;*/
-/*}*/
