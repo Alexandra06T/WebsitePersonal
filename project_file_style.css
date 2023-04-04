@@ -2,7 +2,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 10fr;
     background-color: black;
-    font-family: sans-serif, 'Spartan';
+    font-family: 'Roboto Mono', monospace;
     min-height: 100vh;
     margin: 0;
     padding: 0;

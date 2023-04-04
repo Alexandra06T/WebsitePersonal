@@ -1,32 +1,145 @@
 body {
-    display: flex;
+    min-height: 100vh;
     margin: 0;
-    flex-direction: column;
-    background-color: black;
-    /*background-image: linear-gradient(to right, black, #0a1010);*/
-    font-family: sans-serif, 'Spartan';
+    padding: 0;
+    display: grid;
+    grid-template-rows: 50px auto 50px;
 }
 main {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 50% 50%;
 }
-@media screen and (max-width: 600px){
-    .sidebar {
-        display: none;
-    }
-    #menu_btn_heading {
-        visibility: visible;
-    }
+#left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
-@media screen and (max-width: 1200px) and (min-width: 600px){
-    #menu_btn_heading {
-        visibility: visible;
-    }
+#right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
-#menu_btn_heading {
-    visibility: collapse;
+main img {
+    width: 576px;
+    height: 588px;
+    position: absolute;
 }
-/*dropdown menu*/
+/* animation images*/
+#earth-left{
+    animation-name: earth, earth_a;
+    animation-duration: 4s, 4s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#info_link {
+    animation-name: earth, info_link_a;
+    animation-duration: 4s;
+    animation-delay: 4s, 5s;
+    animation-timing-function: linear;
+}
+#canon-right{
+    animation-name: photo, photo_a;
+    animation-duration: 4s, 4s;
+    animation-timing-function: linear;
+    animation-delay: 5s;
+}
+#photo_link {
+    animation-name: photo_link_a, photo;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 1s, 5s;
+}
+/* modifica opacitatea pozei earth-left + link-ului info=> aparitie photo*/
+@keyframes earth {
+    0% {opacity: 1}
+    20% {opacity: 0.8}
+    75% {opacity: 0}
+    100% {opacity: 1}
+}
+/* modifica opacitatea pozei photo-right + link-ului photo => aparitie earth*/
+@keyframes photo {
+    0% {opacity: 1}
+    20% {opacity: 0.8}
+    75% {opacity: 0}
+    100% {opacity: 1}
+}
+/* roteste imaginea photo*/
+@keyframes photo_a {
+    25% {transform: rotate(90deg) scale(0.8)}
+    50% {transform: rotate(180deg) scale(0.5)}
+    75% {transform: rotate(360deg) scale(0)}
+    100% {transform: rotate(360deg)}
+}
+/* roteste imaginea earth*/
+@keyframes earth_a {
+    25% {transform: rotate(90deg) scale(0.8)}
+    50% {transform: rotate(180deg) scale(0.5)}
+    75% {transform: rotate(360deg) scale(0)}
+    100% {transform: rotate(360deg)}
+}
+/* roteste link ul info*/
+@keyframes info_link_a {
+    0% {transform: rotate(-45deg)}
+    50% {transform: rotate(-90deg) translatey(50%)}
+    100% {transform: rotate(-90deg) translatey(90%)}
+}
+/* roteste link ul photo*/
+@keyframes photo_link_a {
+    0% {transform: rotate(-45deg)}
+    50% {transform: rotate(-90deg) translatey(-50%)}
+    100% {transform: rotate(-90deg) translatey(-100%)}
+}
+#canon-left, #earth-right {
+    z-index: 0;
+}
+#canon-right, #earth-left {
+    z-index: 1;
+}
+/*-------------------------*/
+
+main a {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+    font-size: 7rem;
+    z-index: 2;
+    text-shadow: 2px 2px 4px #000000;
+}
+#info_link {
+    transform: rotate(180deg);
+    left: 15%;
+}
+#photo_link {
+    right: 15%;
+}
+header {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo {
+    padding-left: 2rem;
+    margin-right: 1rem;
+}
+footer {
+    background-color: black;
+    color: white;
+}
+footer::after {
+    /* copyright*/
+}
+/* dropdown menu */
 .dropbutton {
     background-color: transparent;
     padding: 2px;
@@ -65,90 +178,16 @@ main {
     background-color: black;
     color: white;
 }
-#homepage_body {
-    display: grid;
-    grid-template-rows: 3rem auto;
-}
-/*page layout*/
-header {
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
 
-#homepage_main > div {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-}
-.option {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-#homepage_main > div img {
-    /*width: 100%;*/
-    max-width: 95%;
-    height: 90vh;
-    vertical-align: middle;
-}
-#homepage_main #info_option {
-    position: relative;
-    top: 0.8em;
-    left: 3em;
-    writing-mode: vertical-lr;
-    color: white;
-    text-decoration: none;
-    transform: rotate(180deg);
-    font-size: 90px;
-    letter-spacing: 7px;
-}
-#homepage_main #photo_option {
-    position: relative;
-    top: 0.9em;
-    left: 4.8em;
-    writing-mode: vertical-lr;
-    color: white;
-    text-decoration: none;
-    font-size: 90px;
-    letter-spacing: 9px;
-
-}
-#dslr {
-    clip-path: inset(9% 15% 6% 53%);
-    object-fit: cover;
-    transform: translateX(-2%);
-    height: 90%;
-    width: 100%;
-
-}
-#pc {
-    width: 76%;
-    clip-path: inset(0% 51% 0% 7%);
-    /*object-fit: scale-down;*/
-    transform: translateX(2.2%) translateY(1.5%) scale(84.5%);
-}
-@media screen and (max-width: 1400px) and (min-width: 300px){
-
-    #homepage_main img {
-        object-fit: scale-down; /*de modificat scale down, vh*/
+@media screen and (max-width: 1000px) {
+    main img {
+        width: 240px;
+        height: 245px;
     }
-    .overlay {
-        transform: rotate(90deg);
-    }
-    .dropbutton {
-        transform: scale(200%) translateY(30%) translateX(-30%);
-    }
-    .overlay {
-        display: none;
-    }
-    #info_option {
-        display: none;
-    }
-    #photo_option {
-        display: none;
+}
+@media screen and (max-width: 2000px) {
+    main img {
+        width: 480px;
+        height: 490px;
     }
 }
