@@ -5,6 +5,20 @@ body {
     display: grid;
     grid-template-rows: 50px auto 50px;
 }
+.logo {
+    min-height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+
+}
+.logo a {
+    color: pink;
+    font-family: 'Cinzel Decorative', cursive;
+    text-decoration: underline;
+    padding: 2rem;
+}
 main {
     margin: 0;
     padding: 0;
@@ -36,24 +50,28 @@ main img {
     animation-duration: 4s, 4s;
     animation-delay: 1s;
     animation-timing-function: linear;
+    animation-play-state: paused;
 }
 #info_link {
     animation-name: earth, info_link_a;
     animation-duration: 4s;
     animation-delay: 4s, 5s;
     animation-timing-function: linear;
+    animation-play-state: paused;
 }
 #canon-right{
     animation-name: photo, photo_a;
     animation-duration: 4s, 4s;
     animation-timing-function: linear;
     animation-delay: 5s;
+    animation-play-state: paused;
 }
 #photo_link {
     animation-name: photo_link_a, photo;
     animation-duration: 4s;
     animation-timing-function: linear;
     animation-delay: 1s, 5s;
+    animation-play-state: paused;
 }
 /* modifica opacitatea pozei earth-left + link-ului info=> aparitie photo*/
 @keyframes earth {
@@ -101,6 +119,9 @@ main img {
 #canon-right, #earth-left {
     z-index: 1;
 }
+#photo_link, #info_link {
+    z-index: 2;
+}
 /*-------------------------*/
 
 main a {
@@ -109,8 +130,6 @@ main a {
     text-decoration: none;
     writing-mode: vertical-lr;
     font-size: 7rem;
-    z-index: 2;
-    text-shadow: 2px 2px 4px #000000;
 }
 #info_link {
     transform: rotate(180deg);
@@ -127,10 +146,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-#logo {
-    padding-left: 2rem;
-    margin-right: 1rem;
 }
 footer {
     background-color: black;
@@ -160,7 +175,7 @@ footer::after {
     background-color: white;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 grey;
-    z-index: 1;
+    z-index: 2;
     font-size: small;
     text-align: right;
     font-weight: bold;}
@@ -176,16 +191,32 @@ footer::after {
 }
 .menu a:hover {
     background-color: black;
-    color: white;
+    color: pink;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
     main img {
         width: 240px;
         height: 245px;
     }
+    #info_link, #photo_link {
+        color: white;
+        text-shadow: 3px 3px black;
+        transform: scale(0.7);
+    }
 }
-@media screen and (max-width: 2000px) {
+@media screen and (max-height: 500px) {
+    main img {
+        width: 240px;
+        height: 245px;
+    }
+    #info_link, #photo_link {
+        color: white;
+        text-shadow: 3px 3px black;
+        transform: scale(0.5);
+    }
+}
+@media screen and (max-width: 1000px) {
     main img {
         width: 480px;
         height: 490px;

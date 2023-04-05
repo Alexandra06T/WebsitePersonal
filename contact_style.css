@@ -28,21 +28,35 @@ main {
 .sidebar {
     padding: 0;
     margin: 0;
-    display: block;
     background-color: black;
     position: relative;
 }
 .sidebar_btn {
-    width: 100%;
-    height: 3rem;
-    background-color: black;
-    font-size: large;
+    display: block;
+    text-align: center;
 }
-.sidebar_btn > a {
+.sidebar_link {
     color: white;
-    text-decoration: none;
+    text-decoration: underline 1px;
     font-family: 'Spartan', sans-serif;
-    letter-spacing: 0.1rem;
+    display: list-item;
+    padding: 1rem;
+    margin: 1rem;
+    list-style-type: none;
+    border: pink 1px solid;
+}
+.logo {
+    min-height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+
+}
+.logo a {
+    color: white;
+    font-family: 'Cinzel Decorative', cursive;
+    text-decoration: underline;
 }
 .content {
     display: grid;

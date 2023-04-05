@@ -2,7 +2,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 10fr;
     background-color: black;
-    font-family: 'Roboto Mono', monospace;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -14,6 +13,7 @@ main {
     grid-template-rows: 5rem auto 5rem;
     background-color: black;
     overflow: hidden;
+    font-family: 'Playfair Display', serif;
 }
 header {
     background-color: black;
@@ -28,21 +28,48 @@ header svg {
     width: 3rem;
     height: 3rem;
 }
+.logo {
+    min-height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+
+}
+.logo a {
+    color: pink;
+    font-family: 'Cinzel Decorative', cursive;
+    text-decoration: underline;
+}
 footer {
     color: white;
-    font-size: x-small;
+    font-size: small;
     text-align: right;
     padding-top: 2rem;
-    padding-right: 1rem;
+    padding-right: 3rem;
     height: 100%;
     overflow: hidden;
+    background-color: black;
+}
+article {
+
 }
 article h1 {
-    color: white;
+    color: pink;
     padding-bottom: 1rem;
     padding-left: 5rem;
+    font-size: xx-large;
+    text-decoration: underline 1px;
 }
-article p, h2 {
+article h2::before {
+    content: "~ ";
+}
+article h2 {
+    color: pink;
+    padding-left: 5rem;
+    padding-bottom: 1rem;
+}
+article p{
     color: white;
     padding-left: 5rem;
     padding-bottom: 1rem;
@@ -62,21 +89,23 @@ article p {
 .sidebar {
     padding: 0;
     margin: 0;
-    display: block;
     background-color: black;
     position: relative;
 }
 .sidebar_btn {
-    width: 100%;
-    height: 3rem;
-    background-color: black;
-    font-size: large;
+    display: block;
+    text-align: center;
 }
-.sidebar_btn > a {
+.sidebar_link {
     color: white;
-    text-decoration: none;
-    font-family: 'Spartan', sans-serif;
-    letter-spacing: 0.1rem;
+    text-decoration: underline 1px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    display: list-item;
+    padding: 1rem;
+    margin: 1rem;
+    list-style-type: none;
+    border: pink 1px solid;
 }
 .menu > ul {
     list-style-type: none;
@@ -107,6 +136,8 @@ article p {
     }
     .menu > ul > li > a {
         font-size: small;
+        text-decoration: underline 1px;
+        color: white;
     }
     .header {
         justify-content: space-around;
@@ -130,6 +161,10 @@ article p {
     }
     .menu > ul > li {
         display: inline;
+    }
+    .menu > ul > li > a {
+        text-decoration: underline 1px;
+        color: white;
     }
     .header {
         justify-content: center;
