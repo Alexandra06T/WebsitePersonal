@@ -27,6 +27,10 @@ footer {
     display: block;
     text-align: center;
 }
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+}
 .sidebar_link {
     color: white;
     text-decoration: underline 1px;

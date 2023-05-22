@@ -1,13 +1,27 @@
 body {
-    display: flex;
-    margin: 0;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
     background-color: black;
-    font-family: sans-serif, 'Spartan';
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 main {
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 5rem auto 5rem;
+    background-color: black;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+article h1 {
+    color: pink;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+    font-size: xx-large;
+    text-decoration: underline 1px;
+    margin-left: 5%;
 }
 .inner_content h1 {
     color: white;
@@ -34,6 +48,10 @@ main {
 .sidebar_btn {
     display: block;
     text-align: center;
+}
+.sidebar ul {
+    padding: 0;
+    margin: 0;
 }
 .sidebar_link {
     color: white;
@@ -113,4 +131,29 @@ main {
     .heading {
         justify-content: space-evenly;
     }
+}
+form {
+    margin-right: 20%;
+    border: pink 2px solid;
+    margin-left: 10%;
+}
+
+form li {
+    list-style-type: none;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+form label {
+    margin-right: 1rem;
+}
+form button {
+    border: pink solid 2px;
+    background-color: black;
+    color: pink;
+    font-family: "Cinzel Decorative";
+    font-size: medium;
+    width: 7rem;
+    height: 4rem;
 }

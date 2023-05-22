@@ -50,28 +50,28 @@ main img {
     animation-duration: 4s, 4s;
     animation-delay: 1s;
     animation-timing-function: linear;
-    animation-play-state: running;
+    animation-play-state: paused;
 }
 #info_link {
     animation-name: earth /*info_link_a*/;
     animation-duration: 4s;
     animation-delay: 1s;
     animation-timing-function: linear;
-    animation-play-state: running;
+    animation-play-state: paused;
 }
 #canon-right{
     animation-name: photo, photo_a;
     animation-duration: 4s, 4s;
     animation-timing-function: linear;
     animation-delay: 5s;
-    animation-play-state: running;
+    animation-play-state: paused;
 }
 #photo_link {
     animation-name: /*photo_link_a,*/ photo;
     animation-duration: 4s;
     animation-timing-function: linear;
     animation-delay: 5s;
-    animation-play-state: running;
+    animation-play-state: paused;
 }
 /* modifica opacitatea pozei earth-left + link-ului info=> aparitie photo*/
 @keyframes earth {
