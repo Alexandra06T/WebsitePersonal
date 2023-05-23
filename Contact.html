@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="contact.js"></script>
 
 </head>
 <body>
@@ -46,7 +47,7 @@
     </header>
     <article>
       <h1>Contact</h1>
-        <form action="Contact.html" method="post">
+        <form id="contactForm" action="Contact.html" method="post" target="_self">
           <ul>
             <li>
               <label for="name">Nume</label>
@@ -74,8 +75,9 @@
               <label for="cv">Fisier</label>
               <input type="file" id="cv" name="cv">
             </li>
+            <canvas id="canvas"></canvas>
             <li class="button">
-              <button id="submitBtn" type="submit">Trimite</button>
+              <button form="contactForm" id="submitBtn" type="submit">Trimite</button>
             </li>
           </ul>
         </form>

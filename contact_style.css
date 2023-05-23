@@ -157,3 +157,11 @@ form button {
     width: 7rem;
     height: 4rem;
 }
+#canvas {
+    position: absolute;
+    background-color: transparent;
+
+    left: 22.4%;
+    height: 6rem;
+    width: 8rem;
+}
