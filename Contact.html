@@ -48,38 +48,55 @@
     <article>
       <h1>Contact</h1>
         <form id="contactForm" action="Contact.html" method="post" target="_self">
-          <ul>
-            <li>
+          <fieldset>
+            <legend> Date de contact </legend>
+            <p>
               <label for="name">Nume</label>
-              <input type="text" id="name" name="name" pattern="[A-Za-z]+(-?[A-Za-z]*)* [A-Za-z]+(-?[A-Za-z]*)*"/>
-            </li>
-            <li>
+              <input type="text" id="name" name="name" pattern="[A-Za-z]+(-?[A-Za-z]*)* [A-Za-z]+(-?[A-Za-z]*)*" size="50em" maxlength="60"/>
+            </p>
+            <p>
               <label for="mail">Email</label>
-              <input type="email" id="mail" name="email"/>
-            </li>
-            <li>
+              <input type="email" id="mail" name="email" size="50em" multiple="" required/>
+            </p>
+            <p>
               <label for="tel">Numar de telefon</label>
               <input type="tel" id="tel" name="tel" pattern="[0-9]{10}"/>
-            </li>
-            <li>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend> Centru de interes </legend>
+            <p>
               <input type="checkbox" id="subjectF" name="subjectF">
               <label for="subjectF">Fotografie</label>
+            </p>
+            <p>
               <input type="checkbox" id="subjectI" name="subjectI">
               <label for="subjectI">Informatica</label>
-            </li>
-            <li>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend> Mesaj </legend>
+            <p>
               <label for="msg">Mesaj</label>
-              <textarea id="msg" name="message"></textarea>
-            </li>
-            <li>
-              <label for="cv">Fisier</label>
-              <input type="file" id="cv" name="cv">
-            </li>
-            <canvas id="canvas"></canvas>
-            <li class="button">
-              <button form="contactForm" id="submitBtn" type="submit">Trimite</button>
-            </li>
-          </ul>
+              <textarea id="msg" name="message" cols="50" rows="5"></textarea>
+            </p>
+            <p>
+              <label for="cv">Oferta job/CV</label>
+              <input type="file" id="cv" name="cv" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/pdf;" multiple="">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>In ce interval orar pot reveni cu un feedback?</legend>
+            <p>
+              <label for="start">De la </label>
+              <input type="time" id="start" name="start" value="08:00">
+            </p>
+            <p>
+              <label for="finish"> pana la </label>
+              <input type="time" id="finish" name="finish" value="18:00">
+            </p>
+          </fieldset>
+          <button form="contactForm" id="submitBtn" type="submit" value="Trimite date">Trimite</button>
         </form>
     </article>
     <footer>Alexandra Toma</footer>

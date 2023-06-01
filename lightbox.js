@@ -123,6 +123,7 @@ window.onload= () => {
             index = images.length - 1;
         let imageLocation = images[index-1].getAttribute('src');
         lightboxImg.setAttribute('src', imageLocation);
+        lightboxImg.removeEventListener('click', currentImg);
     }
 
     //functia afiseaza imaginea, preia indexul imaginii apasate

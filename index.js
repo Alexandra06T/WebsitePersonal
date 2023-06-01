@@ -1,5 +1,12 @@
 window.onload = () => {
 
+    if(!sessionStorage.getItem('nr_refresh')) {
+        createModal();
+        sessionStorage.setItem('nr_refresh', '1');
+    }
+
+}
+function createModal() {
     //creare modal
     const modalContainer = document.createElement('div');
     const modalContent = document.createElement('div');
@@ -69,7 +76,7 @@ window.onload = () => {
     bgColorInput.type = 'color';
     bgColorInput.name = 'bgcolor';
     bgColorInput.id = 'bgcolor';
-    bgColorInput.value = 'black';
+    bgColorInput.value = '#000000';
 
     bgColordiv.appendChild(bgColorLabel);
     bgColordiv.appendChild(bgColorInput);
@@ -85,7 +92,7 @@ window.onload = () => {
     textColorInput.type = 'color';
     textColorInput.name = 'textcolor';
     textColorInput.id = 'textcolor';
-    textColorInput.value = 'rgb(255,192,203)';
+    textColorInput.value = '#FFC0CB';
 
     textColordiv.appendChild(textColorLabel);
     textColordiv.appendChild(textColorInput);
@@ -109,6 +116,7 @@ window.onload = () => {
     const tnr = document.createElement('option');
     tnr.value = 'Times New Roman';
     tnr.innerText = 'Times New Roman';
+    tnr.selected = true;
 
     fontSelect.appendChild(arial);
     fontSelect.appendChild(calibri);
@@ -126,7 +134,7 @@ window.onload = () => {
 
     form.appendChild(OKbtn);
 
-        //asamblare
+    //asamblare
     modalContainer.appendChild(modalContent);
     modalContent.appendChild(modalclose);
     modalContent.appendChild(paragraph);
@@ -134,7 +142,7 @@ window.onload = () => {
 
     document.body.appendChild(modalContainer);
 
-    function closemodal() {
+    function closemodal(event) {
         //daca am apasat pe trigger
         if(this === event.target)
         {
@@ -142,18 +150,15 @@ window.onload = () => {
         }
     }
 
-    modalclose.addEventListener('click', closemodal);
-    modalContainer.addEventListener('click', closemodal);
-    form.addEventListener('submit', closemodal);
-    OKbtn.addEventListener('click', closemodal);
-    form.addEventListener('submit', submitValues);
-    OKbtn.addEventListener('click', submitValues);
-
-    function submitValues() {
+    function submitValues(event) {
         sessionStorage.setItem('bgcolor', bgColorInput.value);
         sessionStorage.setItem('textcolor', textColorInput.value);
         sessionStorage.setItem('font', fontSelect.value);
+        closemodal(event);
     }
 
-
+    modalclose.addEventListener('click', closemodal);
+    modalContainer.addEventListener('click', closemodal);
+    form.addEventListener('submit', submitValues);
+    OKbtn.addEventListener('click', submitValues);
 }

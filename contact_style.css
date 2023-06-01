@@ -12,7 +12,7 @@ main {
     padding: 0;
     grid-template-rows: 5rem auto 5rem;
     background-color: black;
-    overflow: hidden;
+    overflow: visible;
     font-family: 'Playfair Display', serif;
 }
 article h1 {
@@ -120,6 +120,12 @@ article h1 {
     .heading {
         justify-content: space-evenly;
     }
+    form {
+        width: 100%;
+    }
+    #submitBtn {
+        transform: translateX(10rem);
+    }
 }
 @media screen and (max-width: 1200px) and (min-width: 600px){
     .sidebar {
@@ -131,6 +137,12 @@ article h1 {
     .heading {
         justify-content: space-evenly;
     }
+    form {
+        width: 100%;
+    }
+    #submitBtn {
+        transform: translateX(12rem);
+    }
 }
 form {
     margin-right: 20%;
@@ -138,11 +150,10 @@ form {
     margin-left: 10%;
 }
 
-form li {
+form fieldset {
     list-style-type: none;
-    padding: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
+    padding: 2rem;
+    margin: 2rem;
     color: white;
 }
 form label {
@@ -156,12 +167,6 @@ form button {
     font-size: medium;
     width: 7rem;
     height: 4rem;
-}
-#canvas {
-    position: absolute;
-    background-color: transparent;
-
-    left: 22.4%;
-    height: 6rem;
-    width: 8rem;
+    margin-bottom: 2rem;
+    transform: translateX(25rem);
 }

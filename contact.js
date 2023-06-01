@@ -51,7 +51,7 @@ window.onload = () => {
 
         }
     }
-    draw();
+    // draw();
     function anim() {
         offset++;
         if (offset > 16) {
@@ -61,7 +61,7 @@ window.onload = () => {
         setTimeout(anim, 20);
     }
 
-    anim();
+    // anim();
 
 
 
