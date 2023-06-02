@@ -83,6 +83,6 @@ function canv() {
     let delay = setTimeout(drawFractal, 100);
     //de terminat animatia, de schimbat culorile de pus in loader, de verifict functii
     let interv = setInterval(() => { ctx.clearRect(0,0,canvas.width, canvas.height); spread += 0.3; drawFractal(); },150);
-    setTimeout(()=> {clearInterval(interv); canvas.parentNode.removeChild(canvas)},5000);
+    setTimeout(()=> {clearInterval(interv); canvas.parentNode.removeChild(canvas)},3000);
 
 }

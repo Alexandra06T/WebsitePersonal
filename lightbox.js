@@ -262,8 +262,6 @@ function canv() {
         }
         ctx.restore();
     }
-
-    //de terminat animatia, de schimbat culorile de pus in loader, de verifict functii
     let interv = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         if(spread >= 1)
@@ -274,14 +272,17 @@ function canv() {
         spread += 0.3;
         drawFractal();
     }, 100);
-    setTimeout(()=> {clearInterval(interv); canvas.parentNode.removeChild(canvas)},5000);
+    setTimeout(()=> {clearInterval(interv); canvas.parentNode.removeChild(canvas)},3000);
+    const all = document.body.querySelectorAll('body *');
+    for( let i = 0; i < all.length; i++)
+        all[i].style.visibility = 'visible';
 }
 
 window.onload= () => {
 
-    canv();
-
     getCustomizedVal();
 
     createLightbox();
+    canv();
+
 }
