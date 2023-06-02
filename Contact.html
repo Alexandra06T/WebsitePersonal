@@ -52,7 +52,7 @@
             <legend> Date de contact </legend>
             <p>
               <label for="name">Nume</label>
-              <input type="text" id="name" name="name" pattern="[A-Za-z]+(-?[A-Za-z]*)* [A-Za-z]+(-?[A-Za-z]*)*" size="50em" maxlength="60"/>
+              <input type="text" id="name" name="name" pattern="[A-Za-z]+(-?[A-Za-z]*)* [A-Za-z]+(-?[A-Za-z]*)*" size="50em" maxlength="60" required/>
             </p>
             <p>
               <label for="mail">Email</label>
@@ -82,7 +82,7 @@
             </p>
             <p>
               <label for="cv">Oferta job/CV</label>
-              <input type="file" id="cv" name="cv" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/pdf;" multiple="">
+              <input type="file" id="cv" name="cv" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/pdf;" multiple="" formmethod="post">
             </p>
           </fieldset>
           <fieldset>

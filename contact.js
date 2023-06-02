@@ -29,39 +29,55 @@ window.onload = () => {
     function removeSubmit() {
         btn.remove();
     }
+    btn.onclick =() => {
+        removeSubmit();
+        const name  = document.getElementById('name').value.split(' ')[0];
+        console.log(name);
+        let text = 'Multumesc pentru feedback, '+ name + '! Abia astept sa facem cunostinta!';
+        console.log(text);
+        const div = document.createElement('div');
+        div.innerHTML = text;
+        div.style.color = 'white';
+        div.style.textAlign = 'center';
+        div.style.margin = '2em';
+        form.appendChild(div);
+    }
     btn.addEventListener('click', removeSubmit);
-
-    let offset = 0;
-    function draw() {
-        const canvas = document.getElementById('canvas');
-        if (canvas.getContext('2d')) {
-            const layout = canvas.getContext('2d');
-            layout.lineWidth = 7;
-            const lingrad = layout.createConicGradient(0, 187, 75);
-            lingrad.addColorStop(0, "blue");
-            lingrad.addColorStop(0.3, "pink");
-            lingrad.addColorStop(0.6, "blue");
-            lingrad.addColorStop(1, "pink");
-            layout.strokeStyle = lingrad;
-            layout.linecap = 'round';
-            layout.clearRect(0, 0, canvas.width, canvas.height);
-            layout.setLineDash([7, 30]);
-            layout.lineDashOffset = -offset;
-            layout.strokeRect(0, 0, canvas.width, canvas.height);
-
-        }
-    }
+    //
+    // let offset = 0;
+    // function draw() {
+    //     const canvas = document.getElementById('canvas');
+    //     if (canvas.getContext('2d')) {
+    //         const layout = canvas.getContext('2d');
+    //         layout.lineWidth = 7;
+    //         const lingrad = layout.createConicGradient(0, 187, 75);
+    //         lingrad.addColorStop(0, "blue");
+    //         lingrad.addColorStop(0.3, "pink");
+    //         lingrad.addColorStop(0.6, "blue");
+    //         lingrad.addColorStop(1, "pink");
+    //         layout.strokeStyle = lingrad;
+    //         layout.linecap = 'round';
+    //         layout.clearRect(0, 0, canvas.width, canvas.height);
+    //         layout.setLineDash([7, 30]);
+    //         layout.lineDashOffset = -offset;
+    //         layout.strokeRect(0, 0, canvas.width, canvas.height);
+    //
+    //     }
+    // }
     // draw();
-    function anim() {
-        offset++;
-        if (offset > 16) {
-            offset = 0;
-        }
-        draw();
-        setTimeout(anim, 20);
-    }
+    // function anim() {
+    //     offset++;
+    //     if (offset > 16) {
+    //         offset = 0;
+    //     }
+    //     draw();
+    //     setTimeout(anim, 20);
+    // }
 
     // anim();
+
+
+
 
 
 

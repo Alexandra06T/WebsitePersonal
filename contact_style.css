@@ -127,7 +127,7 @@ article h1 {
         transform: translateX(10rem);
     }
 }
-@media screen and (max-width: 1200px) and (min-width: 600px){
+@media screen and (max-width: 1000px) and (min-width: 600px){
     .sidebar {
         display: none;
     }
